@@ -1,8 +1,8 @@
 name: pretty_numbers
 description: "A package to display number in a readable format to users."
 version: 0.0.1
-author: Marvel ikpmarvel@gmail.com
-homepage:
+
+repository: "https://github.com/mrmarvelworld/pretty-numbers/"
 
 environment:
   sdk: ">=3.3.4 <4.0.0"

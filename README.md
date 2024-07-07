@@ -13,58 +13,63 @@ dependencies:
 
 # Simple Example
 
+```yaml
+
 import 'package:flutter/material.dart';
 import 'package:pretty_numbers/pretty_numbers.dart';
 
 void main() {
-runApp(MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-home: Scaffold(
-appBar: AppBar(
-title: Text('Pretty Numbers Example'),
-),
-body: Padding(
-padding: const EdgeInsets.all(16.0),
-child: ExampleForm(),
-),
-),
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Pretty Numbers Example'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ExampleForm(),
+        ),
+      ),
+    );
+  }
 }
 
 class ExampleForm extends StatefulWidget {
-@override
-\_ExampleFormState createState() => \_ExampleFormState();
+  @override
+  _ExampleFormState createState() => _ExampleFormState();
 }
 
-class \_ExampleFormState extends State<ExampleForm> {
-final \_controller = TextEditingController();
-final \_focusNode = FocusNode();
+class _ExampleFormState extends State<ExampleForm> {
+  final _controller = TextEditingController();
+  final _focusNode = FocusNode();
 
-@override
-void dispose() {
-\_controller.dispose();
-\_focusNode.dispose();
-super.dispose();
+  @override
+  void dispose() {
+    _controller.dispose();
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        PrettyNumbers(
+          controller: _controller,
+          focusNode: _focusNode,
+          hintText: 'Enter amount',
+          suffixIcon: Icon(Icons.check_circle),
+          prefixIcon: Icon(Icons.attach_money),
+        ),
+      ],
+    );
+  }
 }
 
-@override
-Widget build(BuildContext context) {
-return Column(
-children: [
-PrettyNumbers(
-controller: _controller,
-focusNode: _focusNode,
-hintText: 'Enter amount',
-suffixIcon: Icon(Icons.check_circle),
-prefixIcon: Icon(Icons.attach_money),
-),
-],
-);
-}
-}
+
+```
