@@ -1,0 +1,21 @@
+name: pretty_numbers
+description: "A package to display number in a readable format to users."
+version: 0.0.1
+author: Marvel ikpmarvel@gmail.com
+homepage:
+
+environment:
+  sdk: ">=3.3.4 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
